@@ -6,33 +6,33 @@ fn main() {
         value: "hello",
     };
 
-    let mut queueeueueue = PriorityQueue {
+    let mut queue = PriorityQueue {
         queue: vec![init],
         heap_size: 1,
     };
 
-    queueeueueue.insert(Node {
+    queue.insert(Node {
         key: 12,
         value: "world",
     });
 
-    queueeueueue.insert(Node {
+    queue.insert(Node {
         key: 20,
         value: "foo",
     });
 
-    queueeueueue.insert(Node {
+    queue.insert(Node {
         key: 8,
         value: "bar",
     });
 
-    queueeueueue.insert(Node {
+    queue.insert(Node {
         key: 1,
         value: "baz",
     });
 
     loop {
-        let max = queueeueueue.extract_max();
+        let max = queue.extract_max();
 
         match max {
             Some(max) => {
